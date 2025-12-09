@@ -120,8 +120,11 @@ const mapSettingsFromDB = (data: any): SiteSettings => ({
   socialLinkedin: data.social_linkedin || '',
   
   // Paystack
+  paystackMode: data.paystack_mode || 'live',
   paystackPublicKey: data.paystack_public_key || '',
   paystackSecretKey: data.paystack_secret_key || '',
+  paystackTestPublicKey: data.paystack_test_public_key || '',
+  paystackTestSecretKey: data.paystack_test_secret_key || '',
 
   tawkToPropertyId: data.tawk_to_property_id || '',
   tawkToWidgetId: data.tawk_to_widget_id || '',
@@ -145,8 +148,11 @@ const mapSettingsToDB = (settings: Partial<SiteSettings>) => ({
   social_linkedin: settings.socialLinkedin,
   
   // Paystack
+  paystack_mode: settings.paystackMode,
   paystack_public_key: settings.paystackPublicKey,
   paystack_secret_key: settings.paystackSecretKey,
+  paystack_test_public_key: settings.paystackTestPublicKey,
+  paystack_test_secret_key: settings.paystackTestSecretKey,
 
   tawk_to_property_id: settings.tawkToPropertyId,
   tawk_to_widget_id: settings.tawkToWidgetId,

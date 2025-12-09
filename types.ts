@@ -63,8 +63,11 @@ export interface SiteSettings {
   socialLinkedin: string;
   
   // Payment Gateway
+  paystackMode: 'live' | 'test';
   paystackPublicKey?: string;
   paystackSecretKey?: string;
+  paystackTestPublicKey?: string;
+  paystackTestSecretKey?: string;
 
   // Integrations
   tawkToPropertyId: string;
